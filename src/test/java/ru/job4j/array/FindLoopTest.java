@@ -22,4 +22,22 @@ public class FindLoopTest {
         int expect = -1;
         assertEquals(expect, result);
     }
+
+    @Test
+    public void whenArrayHas5InDiapasonThen2() {
+        int[] in = {2, 4, 5, 6, 1};
+        int value = 5;
+        int result = FindLoop.indexOf(in, value, 1, 3);
+        int expected = 2;
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenArrayNasNot2InDiapasonThenMinus1() {
+        int[] in = {2, 4, 5, 6, 1};
+        int value = 2;
+        int result = FindLoop.indexOf(in, value, 2, 4);
+        int expected = -1;
+        assertEquals(expected, result);
+    }
 }
